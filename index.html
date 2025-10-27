@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的情绪日记</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main class="container">
+        <!-- ==== 输入区域 ==== -->
+        <section id="entry-section">
+            <h1>你今天感觉怎么样？</h1>
+            <div id="mood-selector" class="mood-selector">
+                <button class="mood-btn" data-mood="5">😄</button>
+                <button class="mood-btn" data-mood="4">🙂</button>
+                <button class="mood-btn" data-mood="3">😐</button>
+                <button class="mood-btn" data-mood="2">😟</button>
+                <button class="mood-btn" data-mood="1">😠</button>
+            </div>
+            <textarea id="note-input" placeholder="有什么想记录的吗？（可选）"></textarea>
+            <button id="save-btn">保存今日心情</button>
+        </section>
+
+        <!-- ==== 展示区域 ==== -->
+        <section id="display-section">
+            <h2>我的情绪曲线</h2>
+            <canvas id="mood-chart"></canvas> <!-- 图表容器 -->
+            
+            <h2>历史记录</h2>
+            <div id="history-list"></div> <!-- 历史记录列表 -->
+        </section>
+    </main>
+
+    <!-- 引入 JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
